@@ -1,0 +1,32 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{1C4F29AD-D7A7-48F2-85DA-B9EBE5772554}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{FB47CFBD-70DC-45EF-B10F-0A73A5D9B1CA}"
+	ProjectSection(SolutionItems) = preProject
+		global.json = global.json
+	EndProjectSection
+EndProject
+Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "Razor", "src\Razor\Razor.xproj", "{67DD66E1-E358-4515-87D7-FDBA5F1BF7F0}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{67DD66E1-E358-4515-87D7-FDBA5F1BF7F0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{67DD66E1-E358-4515-87D7-FDBA5F1BF7F0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{67DD66E1-E358-4515-87D7-FDBA5F1BF7F0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{67DD66E1-E358-4515-87D7-FDBA5F1BF7F0}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{67DD66E1-E358-4515-87D7-FDBA5F1BF7F0} = {1C4F29AD-D7A7-48F2-85DA-B9EBE5772554}
+	EndGlobalSection
+EndGlobal
