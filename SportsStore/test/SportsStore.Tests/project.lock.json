@@ -1,0 +1,33 @@
+{
+  "locked": false,
+  "version": 2,
+  "targets": {
+    ".NETStandard,Version=v1.6": {
+      "Microsoft.NETCore.App/1.0.1": {
+        "type": "package"
+      }
+    }
+  },
+  "libraries": {
+    "Microsoft.NETCore.App/1.0.1": {
+      "sha512": "M3iH7u95LntTkJtI/DqN/96MRlb8Wa0SjnXldxHA4FjlvEqghOhwK087bDZAZaTN9C4YHckvaYH3ka9eYWZZZw==",
+      "type": "package",
+      "path": "Microsoft.NETCore.App/1.0.1",
+      "files": [
+        "Microsoft.NETCore.App.1.0.1.nupkg.sha512",
+        "Microsoft.NETCore.App.nuspec",
+        "ThirdPartyNotices.txt",
+        "dotnet_library_license.txt",
+        "lib/netcoreapp1.0/_._"
+      ]
+    }
+  },
+  "projectFileDependencyGroups": {
+    "": [
+      "Microsoft.NETCore.App >= 1.0.1"
+    ],
+    ".NETStandard,Version=v1.6": []
+  },
+  "tools": {},
+  "projectFileToolGroups": {}
+}
