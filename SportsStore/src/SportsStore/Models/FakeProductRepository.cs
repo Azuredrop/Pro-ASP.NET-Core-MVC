@@ -1,8 +1,11 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
 
 namespace SportsStore.Models
 {
-    public class FakeProductRepository: IProductRepository
+    public class FakeProductRepository:IProductRepository
     {
         public IEnumerable<Product> Products => new List<Product>
         {
