@@ -7,7 +7,7 @@ namespace SportsStore.Components
     public class NavigationMenuViewComponent : ViewComponent
     {
         private IProductRepository repository;
-
+         
         public NavigationMenuViewComponent(IProductRepository repo)
         {
             repository = repo;
@@ -15,6 +15,7 @@ namespace SportsStore.Components
 
         public IViewComponentResult Invoke()
         {
+            ViewBag.SelectedCategory = RouteData?.Values["category"];
             return View(repository.Products
                 .Select(x => x.Category)
                 .Distinct()
