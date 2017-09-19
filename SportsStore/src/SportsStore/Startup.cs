@@ -18,7 +18,9 @@ namespace SportsStore
         {
             Configuration = new ConfigurationBuilder()
                 .SetBasePath(env.ContentRootPath)
-                .AddJsonFile("appsettings.json").Build();
+                .AddJsonFile("appsettings.json")
+                .AddJsonFile($"appsettings.{env.EnvironmentName}.json", true)
+                .Build();
         }
 
         // This method gets called by the runtime. Use this method to add services to the container.
@@ -45,13 +47,26 @@ namespace SportsStore
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IHostingEnvironment env, ILoggerFactory loggerFactory)
         {
-            app.UseDeveloperExceptionPage();
-            app.UseStatusCodePages();
+            if (env.IsDevelopment())
+            {
+                app.UseDeveloperExceptionPage();
+                app.UseStatusCodePages();
+            }
+            else
+            {
+                app.UseExceptionHandler("/Error");
+            }
+
             app.UseStaticFiles();
             app.UseSession();
             app.UseIdentity();
             app.UseMvc(routes =>
             {
+                routes.MapRoute(
+                    name: "Error", 
+                    template: "Error",
+                    defaults: new { controller = "Error", action = "Error" });
+
                 routes.MapRoute(
                     name: null,
                     template: "{category}/Page{page:int}",
